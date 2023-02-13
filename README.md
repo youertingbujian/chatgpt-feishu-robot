@@ -4,7 +4,7 @@
 
 ### 1.1 项目介绍
 
-> Golang开发的ChatGPT，接入飞书自建应用机器人，支持单聊和群聊
+> Golang开发的ChatGPT，接入飞书自建应用机器人，支持单聊和群聊（群聊下个版本发布）
 
 ## 2. 使用说明
 
@@ -43,7 +43,7 @@ go run main.go
 6、开通"接收群聊中@机器人消息事件"、"获取用户发给机器人的单聊消息"、"读取用户发给机器人的单聊消息"、"获取用户在群组中@机器人的消息"权限
 ```
 
-## 生产部署
+## 3.生产部署
 ### 1、nginx反向代理
 ```
 后端端口 51515 （main.go中可自行修改）
@@ -55,7 +55,7 @@ CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build
 
 ### 3、nohup方式部署amd64文件
 ```
-sudo nohup ./bin/chatgpt  > nohup_chatgpt.log 2>&1 &
+sudo nohup ./path/chatgpt  > nohup_chatgpt.log 2>&1 &
 ```
 ### 4、停止
 ```
